@@ -2,7 +2,7 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 }
 
-function formatMoney(number, decPlaces, decSep, thouSep) {
+function formatM(number, decPlaces, decSep, thouSep) {
 	decPlaces = isNaN(decPlaces = Math.abs(decPlaces)) ? 2 : decPlaces,
 	decSep = typeof decSep === "undefined" ? "." : decSep;
 	thouSep = typeof thouSep === "undefined" ? "," : thouSep;
@@ -22,7 +22,7 @@ function formatMoney(number, decPlaces, decSep, thouSep) {
 
 function draw() {
 	background(0);
-	let annual=530000;
+	let baseline=530000;
 	let start = day();
 	const date1 = new Date('8/1/2020');
 	const date2 = new Date('8/1/2021');
@@ -31,5 +31,5 @@ function draw() {
 	let outputstr = (Math.round(currentvalue*100)/100).toFixed(2);
 	textSize(100);
 	fill(255, 255, 255);
-	text(formatMoney(currentvalue,2,'.',','),width/2-250, height/2);
+	text(formatM(currentvalue,2,'.',','),width/2-250, height/2);
 }
