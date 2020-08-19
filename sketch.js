@@ -27,9 +27,10 @@ function draw() {
 	const date1 = new Date('8/1/2020');
 	const date2 = new Date('8/1/2021');
 	const now = new Date();
-	let currentvalue = map(now,date1,date2,0,annual)
+	let currentvalue = map(now,date1,date2,0,baseline)
 	let outputstr = (Math.round(currentvalue*100)/100).toFixed(2);
 	textSize(100);
 	fill(255, 255, 255);
-	text(formatM(currentvalue,2,'.',','),width/2-250, height/2);
+	textAlign(CENTER, CENTER);
+	text(formatM(currentvalue,2,'.',','),width/2, height/2);
 }
