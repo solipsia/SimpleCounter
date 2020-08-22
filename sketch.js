@@ -29,7 +29,7 @@ function draw() {
 	const now = new Date();
 	let currentvalue = map(now,date1,date2,0,baseline)
 	let outputstr = (Math.round(currentvalue*100)/100).toFixed(2);
-	textSize(100);
+	textSize(150);
 	fill(255, 255, 255);
 	textAlign(CENTER, CENTER);
 	text(formatM(currentvalue,2,'.',','),width/2, height/2);
